@@ -1,15 +1,12 @@
-import Banner from "./components/Banner"
 import './App.css'
-
+import NavBar from './complement/navBar/NavBar'
+import ItemListContainer from './complement/ItemListContainer'
 function App() {
-
 
   return (
     <div>
-      <h1>Natynails 
-      </h1>
-      <p>Uñas con estilo</p>
-      <Banner/>
+    <NavBar />
+    <ItemListContainer saludo = "uñas lindas"/>
     </div>
   )
 }
