@@ -23,6 +23,7 @@
     width: 90%;
 }
 .info-card{
+    align-items: end;
     padding: 20px 0;
 }
 .info-card .title-card{
@@ -32,4 +33,10 @@
 .info-card .description-card{
     font-size: 1rem;
     font-weight: 300;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+.box-button-item.button-item{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50%;
+}
+

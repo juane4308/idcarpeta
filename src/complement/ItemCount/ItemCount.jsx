@@ -1,32 +1,30 @@
-import React from 'react'
-import { useState } from 'react'
+import { useState } from "react"
 
-const ItemCount = ( {addToCart}) => {
-const [count,setcount] = useState (1)
+const ItemCount = ({ handleClick, stock }) => {
+    const [count, setCount] = useState(1);
 
-const sumar = () => {
-    setcount (count +1)
-};
-const restar = () => {
-    if (count > 1) {
-        setcount (count -1)
+    const handleAdd = () => {
+    if(count > stock) {
+        setCount(count + 1);
     }
-    
+        
 };
 
+    const handleSubtrac = () => {
+            setCount(count - 1);
+    };
 
-return (
-    <div>
+    return (
         <div>
-            <button onClick={restar}>-</button>
-            <p>{count}</p>
-            <button onClick={sumar}>+</button>
             <div>
-                <button onClick={ () =>addToCart (count)}>Agregar al carrito</button>
+                <button onClick={handleSubtrac}>-</button>
+                <p> {count} </p>
+                <button onClick={handleAdd}>+</button>
+            </div>
+            <div>
+                <button onClick={ () => handleClick(count)} > Agregar al carrito</button>
             </div>
         </div>
-</div>
-  )
-}
-
-export default ItemCount
+    );
+};
+export default ItemCount;
